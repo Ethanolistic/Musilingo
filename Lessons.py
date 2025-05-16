@@ -40,13 +40,7 @@ def beginner(lesson_input):
             # if input is yes, should print review portion. If no, should print beginner 2 again.
             Continue_input = input("Ready to move on?")
             if Continue_input.lower() == "yes":
-                print("Ok lets go!!")
-            else:
-                print("No worries. You got all the time in the world.")
-                beginner1 = True
-            # review portion
-            if Continue_input.lower() == "yes":
-                print("Since this is the beginning and you should be new, let's do some review!\n \n"
+                print("Ok lets go!!\n \nSince this is the beginning and you should be new, let's do some review!\n \n"
                       "As we've covered, there are three types of notes on a piano: Sharps[♯],\n Flats[♭], and Naturals[♮]."
                       "The usage of them changes depending on the context in the key signature. If you are playing in a sharp"
                       "key, then you wou ld most likely use sharps for accidentals. Naturals can be used in both because it lets"
@@ -54,15 +48,21 @@ def beginner(lesson_input):
                       "and naturals, you should know how to identify notes on a piano. Lets say that you play an E♭. Another way "
                       "to identify that note is D♯. For naturals, if D♯ is in the key of the piece that is\n being analyzed, and"
                       "a D natural accidental shows up, it should look like this: [D♮]")
+            else:
+                print("No worries. You got all the time in the world.")
+                beginner1 = True
+            # review portion
+            if Continue_input.lower() == "yes":
                 # prompt user to start the quiz.
-                Continue_input = ("Are you ready for the quiz?")
+                Continue_input = input("Are you ready for the quiz?")
                 # if yes, go on to beginner_quest. If no, keep user there and reprint "Ready to move on?"
                 if Continue_input.lower() == "yes":
                     print("Okay! Good luck!")
                     beginner1 = True
                 else:
                     print("Take as much time needed to review!")
-        while beginner_quest is False:
+                    beginner1 = True
+        while beginner_quest is True:
             print("Okay lets get started!")
             # question 1
             quest1 = input("What is another name for [C♯]? \n A. D flat\n B. C natural\n C. B double flat")
@@ -99,7 +99,13 @@ def beginner(lesson_input):
                 return welcome()
 
 
-#def intermedaite():
+def intermediate(lesson_input):
+    inter_quest = True
+    inter1 = True
+    # start intermediate lesson
+    if lesson_input.lower() == "intermediate":
+        inter1 = False
+
 
 #def novice():
 
