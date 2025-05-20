@@ -21,16 +21,16 @@ def beginner(lesson_input):
             print(
                 "Beginner 1:\n Ok let's begin!\n Let's start with the layout of a piano. If you were to look up an image,\n you'd notice that there are a mixture of black and white keys. The black keys are known as sharps or flats, and the\n white keys are known as naturals. Sharps can be notated using the [♯] symbol,\n Flats can be notated using the [♭] symbol, and naturals can be notated using the [♮] symbol.")
             # takes in user input to proceed
-            Continue_input = input("Ready to move on?")
+            continue_input = input("Ready to move on?")
             # should print beginner 2 if input is "yes" and should print beginner 1 again if input is "no"
-            if Continue_input.lower() == "yes":
+            if continue_input.lower() == "yes":
                 print("Ok, let's move on!")
                 beginner1 = True
             else:
                 print("Take as much time as you need.")
                 beginner1 = True
             # print beginner 2
-            if Continue_input.lower() == "yes":
+            if continue_input.lower() == "yes":
                 print("Beginner 2:\n Now that we have some fundamentals,"
                       "lets take a brief look at a concept\n called Enharmonics.\n"
                       "Enharmonics are essentially the idea that notes on a piano"
@@ -38,8 +38,8 @@ def beginner(lesson_input):
                       "(double flat). Double flats look advanced but they aren't. So, for the sake of conntinuity,"
                       "we'll save them for later.")
             # if input is yes, should print review portion. If no, should print beginner 2 again.
-            Continue_input = input("Ready to move on?")
-            if Continue_input.lower() == "yes":
+            continue_input = input("Ready to move on?")
+            if continue_input.lower() == "yes":
                 print("Ok lets go!!\n \nSince this is the beginning and you should be new, let's do some review!\n \n"
                       "As we've covered, there are three types of notes on a piano: Sharps[♯],\n Flats[♭], and Naturals[♮]."
                       "The usage of them changes depending on the context in the key signature. If you are playing in a sharp"
@@ -52,11 +52,11 @@ def beginner(lesson_input):
                 print("No worries. You got all the time in the world.")
                 beginner1 = True
             # review portion
-            if Continue_input.lower() == "yes":
+            if continue_input.lower() == "yes":
                 # prompt user to start the quiz.
-                Continue_input = input("Are you ready for the quiz?")
+                continue_input = input("Are you ready for the quiz?")
                 # if yes, go on to beginner_quest. If no, keep user there and reprint "Ready to move on?"
-                if Continue_input.lower() == "yes":
+                if continue_input.lower() == "yes":
                     print("Okay! Good luck!")
                     beginner1 = True
                 else:
@@ -105,8 +105,38 @@ def intermediate(lesson_input):
     # start intermediate lesson
     if lesson_input.lower() == "intermediate":
         inter1 = False
-
-
+        while inter1 is False:
+            print("Welcome to the Intermediate Course! Here we'll go through the three topics of:"
+                  "\n The Grand Staff\n Key Signatures\n and Time Signatures\n \n \n Intermediate 1:\n "
+                  "The Grand Staff is where ALL the notes are placed on. It presents itself as a combination bettween The treble clef and the bass clef. "
+                  "On these clefs are Lines and Spaces. Keep in mind that the lines and spaces are different for each clef. "
+                  "For Treble clef from bottom to top, the lines are [E], [G], [B], [D], [F]. The Spaces are [F], [A], [C], [E]. "
+                  "To remember the Lines, here's a simple phrase:\n [E]very [G]ood [B]oy [D]oes [F]ine. For the spaces, Just remember FACE.\n "
+                  "The bass clef is not that different. The lines are [G], [B], [D], [F], [A]. The spaces are [A], [C], [E], [G]. "
+                  "To remember the bass cleff lines, use this:\n [G]ood [B]oys [D]o [F]ine [A]lways. For the spaces:\n [A]ll [C]ows [E]at [G]rass.\n "
+                  "Now that we've gone through the Grand Staff, let's move on to Key Signatures. ")
+            continue_input = input("Ready to move on?")
+            if continue_input.lower() == "yes":
+                print("Alright lets go!!")
+            else:
+                print("That's alright. It's a new topic so take your time!")
+            if continue_input.lower() == "yes":
+                print("Intermediate 2:\n Remember Sharps and Flats? Well, composers use these to show how many sharps or flats there are in a key.\n "
+                      "They do this by putting the sharps or flats right next to the clef sign. For example, the key of C major has no sharps or flats in the key signature.\n"
+                      "This is because all of the notes in the scale are white keys. If we were to go to a fifth above C,\n"
+                      "to the key of G major, there would be one sharp: [F♯]. This trend continues throughout all keys in music.\n"
+                      "When you go a fifth up, a sharp is added, and when you go a fourth up, a flat is added to the key signature.")
+            continue_input = input("Ready to go?")
+            if continue_input.lower() == "yes":
+                print("Okay cool!")
+            else:
+                print("No problem.")
+            if continue_input.lower() == "yes":
+                print("On to time signatures!\n Time signatures are what lets the performer know the timing in which to play"
+                      "each note. On sheet music, the time signature is shown right next to the key signature. It's almost like"
+                      "all the important information is right at the beginning of the piece!\n The Time signature of a song is usually"
+                      "represented as a fraction such as: 4/4, 3/4, 2/4, 3/2.\n Other times, musicians use words like 'Common Time',"
+                      "'Cut time', or 'ballad' to represent these time signatures.\n ")
 #def novice():
 
 #def advanced():
