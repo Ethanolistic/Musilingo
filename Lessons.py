@@ -1,16 +1,5 @@
+import main as m
 # Making classes for each lesson
-def welcome():
-    user_input = input("Welcome Pupil to the Music Studio! Please enter your name: ")
-    Username = user_input
-    lesson_input = input(
-        "Hello " + Username + "! Please choose a lesson from the following list: \n "
-                              "Beginner\n Intermediate\n Advanced\n Novice\n NOTICE:\n "
-                              "!! At the end of each lesson, there will be a quiz to see what you learned. \n "
-                              "Try and get as many questions correct as possible!!"
-                              "")
-
-
-
 def beginner(lesson_input):
     beginner_quest = True
     beginner1 = True
@@ -62,7 +51,8 @@ def beginner(lesson_input):
                 else:
                     print("Take as much time needed to review!")
                     beginner1 = True
-        while beginner_quest is True:
+        beginner_quest = False
+        while beginner_quest is False:
             print("Okay lets get started!")
             # question 1
             quest1 = input("What is another name for [C♯]? \n A. D flat\n B. C natural\n C. B double flat")
@@ -91,12 +81,8 @@ def beginner(lesson_input):
             # incase user enters jibberish
             else:
                 print("Please enter a letter!")
-                beginner_quest = True
-
+            return m.homepage()
             # prompt user to return back to lesson choices.
-            home_page = input("Press H to return home!")
-            if home_page.lower() == "h":
-                return welcome()
 
 
 def intermediate(lesson_input):
@@ -136,7 +122,16 @@ def intermediate(lesson_input):
                       "each note. On sheet music, the time signature is shown right next to the key signature. It's almost like"
                       "all the important information is right at the beginning of the piece!\n The Time signature of a song is usually"
                       "represented as a fraction such as: 4/4, 3/4, 2/4, 3/2.\n Other times, musicians use words like 'Common Time',"
-                      "'Cut time', or 'ballad' to represent these time signatures.\n ")
+                      "'Cut time', or 'ballad' to represent these time signatures.\n "
+                      "Here are the feels associated with the time signatures:\n Ballad: 3/4\n Common Time: 4/4\n Cut Time: 2/4")
+            continue_input = input("Ready to move on?")
+            if continue_input.lower() == "yes":
+                print("Alright! Get ready for a test!")
+            else:
+                print("Okay. Just be mindful that there's a test next!")
+           # if continue_input.lower() == "yes":
+
+
 #def novice():
 
 #def advanced():
